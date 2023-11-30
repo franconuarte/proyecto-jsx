@@ -1,0 +1,22 @@
+.navbar {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+.logo{
+    margin-right: 300px;
+    height: 150px;
+    width: 190px;
+}
+.anclas{
+    margin-top: 50px;
+}
+
+.ancla {
+    color: black;
+    text-decoration: none;
+    margin: 20px;
+}
+.carro{
+    margin-top: 50px;
+}
