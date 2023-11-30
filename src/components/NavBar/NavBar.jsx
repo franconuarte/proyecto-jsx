@@ -1,13 +1,13 @@
 import cart from './assets/logo.png';
 import CartWidget from '../CardWidget/CartWidget';
-import estilos from './NavBar.css';
-import { NavLink, link } from 'react-router-dom';
+import './NavBar.css';
+import { NavLink, Link } from 'react-router-dom';
 
 const NavBar = () => {
     return (
-        <nav class="navbar">
+        <nav className="navbar">
             <link to='/'>
-                <img class="logo" src={cart} />
+                <img className="logo" src={cart} />
             </link>
             <div className="anclas">
                 <NavLink to={'/category/1'} className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'}>1</NavLink>
