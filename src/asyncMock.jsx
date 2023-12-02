@@ -5,7 +5,7 @@ const products = [
         price: 1600,
         category: 'maquillaje1',
         img: 'https://titan.vtexassets.com/arquivos/ids/163288/Salud-y-Belleza-Bases_30199588_1.jpg?v=637321693853270000',
-        stock: '10',
+        stock: '13',
         description: 'descripcion de base liquida'
     },
     {
@@ -14,7 +14,7 @@ const products = [
         price: 12000,
         category: 'maquillaje2',
         img: 'https://www.maferbenites.com/wp-content/uploads/2020/02/proconceal-cooltan.jpg',
-        stock: '17',
+        stock: '13',
         description: 'descripcion de corrector de ojeras'
     }
 ]
@@ -31,6 +31,14 @@ export const getProductById = (productId) => {
     return new Promise((resolve) => {
         setTimeout(() => {
             resolve(products.find(prod => prod.id === productId))
+        }, 500)
+    })
+}
+
+export const getProductByCategory = (categoryId) => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(products.filter(prod => prod.category === categoryId))
         }, 500)
     })
 }
