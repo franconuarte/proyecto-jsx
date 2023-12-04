@@ -1,7 +1,23 @@
 .article {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
     margin: 50px;
     margin-left: 500px;
     border: 3px solid black;
-    width: 200px;
+    width: 400px;
+}
+
+.img {
+    object-fit: contain;
+    width: 300px;
+    height: 400px;
+}
+
+.centrar {
+    display: flex;
+    justify-content: center;
+}
+
+.section {
+    flex-direction: column;
 }

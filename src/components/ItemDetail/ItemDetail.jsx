@@ -6,15 +6,15 @@ const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
 
     return (
         <article className='article'>
-            <header>
+            <header className='centrar'>
                 <h2>
                     {name}
                 </h2>
             </header>
-            <picture>
-                <img src={img} alt={name} />
+            <picture className='centrar'>
+                <img className='img' src={img} alt={name} />
             </picture>
-            <section>
+            <section className='section'>
                 <p >
                     Categoria: {category}
                 </p>
@@ -25,7 +25,7 @@ const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
                     Precio: ${price}
                 </p>
             </section>
-            <footer >
+            <footer className='centrar'>
                 <ItemCount initial={0} stock={13} onAdd={(quantity) => console.log('Cantidad agregada: ', quantity)} />
             </footer>
         </article>
