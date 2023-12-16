@@ -14,7 +14,7 @@ const CartItem = ({ item }) => {
     return (
 
         <div className="div">
-            <img className="m" src={item.img} alt={item.item.name} />
+
             <h5 className="m">Producto: {item.item.name}</h5>
             <p className="m">Cantidad: {item.cantidad}</p>
             <p className="m">Precio: $ {item.item.price}</p>
