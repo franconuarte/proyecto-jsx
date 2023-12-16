@@ -6,10 +6,10 @@ import CheckoutForm from '../CheckoutForm/CheckoutForm';
 
 
 const Checkout = () => {
-    const { loading, setLoading } = useState(false)
-    const { orderId, setOrderId } = useState('')
+    const [loading, setLoading] = useState(false)
+    const [orderId, setOrderId] = useState('')
 
-    const { cart, total, clearCart } = useState(CartContext)
+    const { cart, total, clearCart } = useContext(CartContext)
 
     const createOrder = async ({ name, phone, email }) => {
         setLoading(true)
@@ -32,7 +32,7 @@ const Checkout = () => {
 
             const productsRef = collection(db, 'products')
 
-            const productsAddedFromFirestore = await getDocs(query(productsRef, where(documentId(), 'in')))
+            const productsAddedFromFirestore = await getDocs(query(productsRef, where(documentId(), 'in', ids)))
 
             const { docs } = productsAddedFromFirestore
 
