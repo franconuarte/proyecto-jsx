@@ -1,0 +1,8 @@
+.div {
+    display: flex;
+    flex-direction: row;
+}
+
+.m {
+    margin: 30px;
+}

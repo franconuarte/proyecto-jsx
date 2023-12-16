@@ -6,3 +6,11 @@
 .h4 {
     margin: 20px;
 }
+
+.mas-menos {
+    background-color: rgb(230, 126, 144);
+}
+
+.mas-menos:hover {
+    background-color: pink;
+}
